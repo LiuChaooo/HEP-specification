@@ -711,6 +711,47 @@ none
 }
 ```
 
+#### Get the reward tokens amount of last round
+
+##### Path
+`
+/newforce/:newid/tokens/
+`
+
+* `newid` - the NewID of user's.
+
+
+##### Parameters
+none
+
+##### Returns
+| Field | Type | Notes |
+| --- | --- | --- |
+| total_reward | string | The total reward tokens |
+| direct_invite_reward | string | The reward tokens of direct invitation |
+| indirect_invite_reward | string | The reward tokens of indirect invitation |
+| direct_buy_reward | string | The reward tokens of direct purchase |
+| indirect_buy_reward | string | The reward tokens of indirect purchase |
+| sale_reward | string | The reward tokens of sale |
+| locked_for_candidate_reward | string | The reward tokens of locked for community node |
+| locked_for_voter_reward | string | The reward tokens of locked for vote |
+
+
+##### Example
+```
+// Response
+{
+    'direct_buy_reward': '0.00',
+    'direct_invite_reward': '0.00',
+    'indirect_buy_reward': '0.00',
+    'indirect_invite_reward': '0.00',
+    'locked_for_candidate_reward': '15.82',
+    'locked_for_voter_reward': '13.04',
+    'sale_reward': '0.00',
+    'total_reward': '29.00'
+  }
+```
+
 ### Oracle
 
 #### Get the information of given oracle
